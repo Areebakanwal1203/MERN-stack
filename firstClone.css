@@ -1,0 +1,13 @@
+  p{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    display: inline;
+    margin: 0 15px;
+    background-color: white;
+    color:black
+}
