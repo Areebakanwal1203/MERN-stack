@@ -9,8 +9,17 @@
  
     <link rel="stylesheet" href="firstClone.css">
 
+    <script>
+    function toggleMenu() {
+    document.querySelector(".nav-menu ul")
+            .classList.toggle("mobile-menu");
+    }
+    </script>
+
 </head>
 <body>
+    <link rel = "styleSheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <div class="announcement-bar">
         Today deal sale off 50%. End in time. Hurry Up!!
     </div>
@@ -19,11 +28,14 @@
     <div id="menuBar">
 
         <img id="logo" src="images/nishatlogo.png" alt="nishat logo">
-  
+        
   <div class="right">
-    <img class="icons" src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"  alt="profile">
-    <img class="icons" src="https://cdn-icons-png.flaticon.com/512/622/622669.png"  alt="search">
-    <img class="icons" src="https://cdn-icons-png.flaticon.com/512/263/263142.png"  alt="bag">
+
+  
+    <a href="#"><i class="fa-solid fa-magnifying-glass icons"></i></a>
+      <a href="#"> <i class="fa-regular fa-user icons"></i></a>
+        <a href="#"> <i class="fa-regular fa-heart icons"></i></a>
+    <a href="#"><i class="fa-solid fa-bag-shopping icons"></i></a>
 </div>
 
 </div>
@@ -40,6 +52,11 @@
                 <li><a href="/collections/lowers">LOWERS</a></li>
                 <li><a href="/collections/fashion">FASHION</a></li>
             </ul>
+
+            <div class="menu-icon"onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+
         </nav>
         </header>
 
@@ -184,12 +201,95 @@
         <h3>3-PIECE</h3>
     </div>
     </div>
-        <h3 class="">Track Your Order</h3>
+<!-- WHITE SECTION -->
+<div class="footer-top">
+    <div class="footer-top-content">
+    <div class="footer-box">  
+        <i class="fa-solid fa-truck"></i>
+        <div>
+    <h4>Track Your Order</h4>
+    <p>Click here for quick update</p>
+</div>
+</div>
 
+<div class="footer-box">
+        <i class="fa-solid fa-headset"></i>
+<div>
+    <h4>SUPPORT 24/7</h4>
+    <p>Contact us 24 hours a day, 7 days a week</p>
+</div>
+</div>
+
+<div class="footer-box">
+        <i class="fa-solid fa-lock"></i>
+<div>
+    <h4>100% PAYMENT SECURE</h4>
+    <p>We ensure secure payment with PEV</p>
+</div>
+</div>
+
+<div class="footer-box"> 
+    <i class="fa-solid fa-credit-card"></i>
+<div>
+   
+    <h4>Payment Methods</h4>
+    <p>COD, Credit Card: Visa, Master Card</p>
+</div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer class="footer-bottom-section">
+    <div class="footer-bottom-content">
+
+        <div>
+            <p>21 Km Ferozpur Road Lahore Pakistan.</p>
+            <p>nlfps@nishatmills.com</p>
+            <p>+92 42 111 647 428</p>
+        </div>
+
+        <div>
+            <h4>Information</h4>
+            <br>
+            <p>Order Tracking</p>
+            <p>Store Locator</p>
+            <p>About Us</p>
+        </div>
+
+        <div>
+            <h4>Customer Services</h4>
+            <br>
+            <p>FAQs</p>
+            <p>Size Guide</p>
+            <p>Contact Us</p>
+        </div>
+
+        <div>
+            <h4>Newsletter Signup</h4>
+            <br>
+            <p>Subscribe to our newsletter</p>
+            <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+        </div>
+
+    </div>
+</footer>
+
+<!-- 
 <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-           
+            <div class="footer-section">           
+
+        <div class="footer-box">
+        <h3>Track Your Order</h3>
+       </div>
 
     <div class="footer-box">
         <h3>SUPPORT 24/7</h3>
@@ -208,45 +308,53 @@
 
 </div>
 
-            <div class="footer-section">
-                <p>21 Km Ferozpur Road Lahore Pakistan.</p>
-                <p>nlfps@nishatmills.com</p>
-                <p>+92 42 111 647 428</p>
-            </div>
+            <div class="footer-container">
 
-            <div class="footer-section">
-                <h3>Information</h3>
-                <ul>
-                    <li><a href="https://nishat.ginkgoretail.net/ordertracking/020123180325708028">Order Tracking</a></li>
-                    <li><a href="/pages/store-locator">Store Locator</a></li>
-                    <li><a href="/pages/about-us">About Us</a></li>
-                    <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/pages/terms-conditions">Terms & Conditions</a></li>
-                </ul>
-            </div>
+        <div class="footer-column contact">
+            <p>21 Km Ferozpur Road Lahore Pakistan.</p>
+            <p>nlfps@nishatmills.com</p>
+            <p>+92 42 111 647 428</p>
+        </div>
 
-            <div class="footer-section">
-                <h3>Customer Services</h3>
-                <ul>
-                    <li><a href="/pages/faqs">FAQs</a></li>
-                    <li><a href="/pages/size-guide">Size Guide</a></li>
-                    <li><a href="/pages/contact-us">Contact Us</a></li>
-                    <li><a href="/pages/return-and-exchange-policy">Return & Exchange Policy</a></li>
-                </ul>
-            </div>
+        <div class="footer-column">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
 
-            <div class="footer-section newsletter">
-                <h3>Newsletter Signup</h3>
-                <p>Subscribe to our newsletter and get latest updates.</p>
-                <input type="email" placeholder="Enter your email">
+        <div class="footer-column">
+            <h3>Customer Services</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Return & Exchange Policy</a></li>
+            </ul>
+        </div>
+
+     
+        <div class="footer-column newsletter">
+            <h3>Newsletter Signup</h3>
+            <p>Subscribe to our newsletter and get latest updates.</p>
+
+            <div class="newsletter-box">
+                <input type="email" placeholder="Your email address">
                 <button>Subscribe</button>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>Copyright © 2026 Nishat Outlet. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © 2026 Nishat Outlet. All rights reserved.</p>
+    </div>
+
+    </footer>-->
 
 </body>
 </html>

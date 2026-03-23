@@ -20,14 +20,19 @@
 }
  #menuBar {
     display: flex;
-    padding: 15px;
-    padding-bottom: 40px;
+    padding: 35px;
+    padding-bottom: 50px;
 }
 
 
 .icons {
-    width: 25px;
+    font-size: 27px;
+    margin-left: 10px;
+    color: rgb(70, 66, 66);
 }
+
+
+
 
 .right {
     display: flex;
@@ -38,7 +43,7 @@
 /* Logo perfectly center */
 #logo {
  
-    width: 120px;
+    width: 150px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);     
@@ -47,14 +52,20 @@
 .nav-menu {
     border-top: 1px solid rgb(222, 214, 214);
     padding-bottom: 20px;
+    position: relative;
  
+}
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .nav-menu ul{
     list-style: none;
     justify-content: center;
     display: flex;
-    gap: 25px;
+    gap: 33px;
     padding-top: 20px;
     
 
@@ -62,7 +73,7 @@
 .nav-menu ul li a{
     text-decoration: none;
     color:black;
-    font-size: 14px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -76,7 +87,7 @@
     justify-content:center;
     gap: 15px;
     margin: 15px 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .products-card {
@@ -114,27 +125,6 @@
     padding-bottom: 0;
     font-family:sans-serif;
 }
-
-.footer-section {
-    display: flex;
-    justify-content: space-between;  /* evenly spread */
-    align-items: flex-start;
-    width: 100%;
-}
-
-.footer-box {
-    width: 30%;              /* taake 3 columns ban jayein */
-}
-
-.footer-box h3 {
-    margin-bottom: 5px;
-}
-
-.footer-box {
-    display: flex;
-    flex-direction: column;   /* h3 ke neeche p */
-}
-
 .sectionTitle::before,
 .sectionTitle::after {
     content: "";
@@ -147,6 +137,114 @@
    
     margin: 0 30px;     /* text ke left right gap */
 }
+
+/* TOP WHITE FOOTER */
+.footer-top {
+    background: #fff;
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-top-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 20%;
+}
+
+.footer-box div{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.footer-box h4 {
+    margin: 0;
+}
+
+.footer-box p {
+    margin: 0;
+   margin-top: 4px;
+}
+.footer-top-content h4 {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.footer-top-content p {
+    font-size: 20px;
+    color: gray;
+}
+.footer-top-content i {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* BOTTOM GREY FOOTER */
+.footer-bottom-section {
+    background: #f7f7f7;
+    padding: 60px 0;
+}
+
+.footer-bottom-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;    
+
+}
+
+.footer-bottom-content > div {
+    flex: 1;
+    min-width: 100px;
+}
+
+.footer-bottom-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+
+.footer-bottom-content p {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+
+/* Newsletter input styling */
+.footer-bottom-content input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 10px;
+}
+
+.footer-bottom-content button {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
 
 
 @media (max-width: 768px) {
@@ -163,13 +261,40 @@
     .products-card {
         max-width: 80%;
     }
+    
+.sectionTitle { 
+    font-size: 80%;
+}
+.sectionTitle::before,
+.sectionTitle::after {
+width: 40px;
+}
+}
+@media (max-width: 757px) {
+   
+    .menu-icon {
+        display: block;
+        position: absolute;  
+        left: 20px;           
+        top: 25px;       
+        padding: 0;   
+        
+    }
+
+    .nav-menu ul {
+        display: none; 
+    }
+
+  .nav-menu ul.mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
 
 }
-
-
-
-
-
 
 
 
