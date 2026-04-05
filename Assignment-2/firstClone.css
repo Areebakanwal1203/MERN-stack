@@ -27,12 +27,10 @@
 
 .icons {
     font-size: 27px;
+    /*margin-left: 10px;*/
     margin-left: 10px;
     color: rgb(70, 66, 66);
 }
-
-
-
 
 .right {
     display: flex;
@@ -90,9 +88,10 @@
     flex-wrap: wrap; 
 }
 
+
 .products-card {
-    width: 100%;
-    max-width: 350px;
+    flex: 1 1 200px;
+    max-width: 540px;
     text-align: center;
 }
 
@@ -105,6 +104,8 @@
 .products-card a {
     text-decoration: none;
     color: black;
+    display: block; 
+    width: 100%;
 }
 
 .products-card h3 {
@@ -184,7 +185,7 @@
     color: gray;
 }
 .footer-top-content i {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px;
     color: #555;
 }
@@ -192,7 +193,7 @@
 /* BOTTOM GREY FOOTER */
 .footer-bottom-section {
     background: #f7f7f7;
-    padding: 60px 0;
+    padding: 90px 0;
 }
 
 .footer-bottom-content {
@@ -243,10 +244,6 @@
     margin-top: 10px;
 }
 
-
-
-
-
 @media (max-width: 768px) {
     #logo {
         width: 90px;
@@ -292,16 +289,4 @@ width: 40px;
         text-align: center;
         padding: 20px 0;
     }
-
-
 }
-
-
-
-
-
-
-
-
-
-
