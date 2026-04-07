@@ -6,14 +6,6 @@
     <title>NISHAT OUTLET</title>
     <link rel="stylesheet" href="firstClone.css">
 
-
-    <script>
-    function toggleMenu() {
-    document.querySelector(".nav-menu ul")
-            .classList.toggle("mobile-menu");
-    }
-    </script>
-
 </head>
 <body>
     <link rel = "styleSheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -60,6 +52,32 @@
 
    
         <img id ="landing_img" src="https://nishatlinenfps.com/cdn/shop/files/2_7b284221-d11d-4f60-b6d4-231509e1e04d.jpg?v=1770197013&width=1500" alt="Banner 1">
+
+
+        <h3 class="sectionTitle">
+            <span>FEATURED DEALS</span>
+        </h3>
+
+        <div id="featured-products-grid" class="products-grid">
+            <p style="text-align:center; color:gray;">Loading deals...</p>
+        </div>
+
+        <div id="quick-view-modal" style="display:none;">
+
+    <div class="modal-content">
+
+         <button class="close-btn" onclick="closeModal()">✕</button>
+
+            <img id="modal-img">
+            <h2 id="modal-title"></h2>
+            <p id="modal-price"></p>
+            <p id="modal-desc"></p>
+            <p id="modal-rating"></p>
+        </div>
+    </div>
+
+
+
 
 
         <h3 class="sectionTitle">
@@ -275,6 +293,49 @@
 
     </div>
 </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+let productMap = {};
+
+$.ajax({
+    url: "https://fakestoreapi.com/products?limit=4",
+    method: "GET",
+    success: function(products){
+        $("#featured-products-grid").empty();
+        $.each(products, function(i, product){
+            productMap[product.id] = product;
+            let card = `
+                <div class="products-card">
+                    <img src="${product.image}">
+                    <h3>${product.title}</h3>
+                    <p>$${product.price}</p>
+                    <button class="quick-view-btn" data-id="${product.id}">Quick View</button>
+                </div>
+            `;
+            $("#featured-products-grid").append(card);
+        });
+    }
+});
+
+$(document).on("click", ".quick-view-btn", function(){
+    let p = productMap[$(this).data("id")];
+    $("#modal-img").attr("src", p.image);
+    $("#modal-title").text(p.title);
+    $("#modal-price").text("$" + p.price);
+    $("#modal-desc").text(p.description);
+    $("#modal-rating").text("⭐ " + p.rating.rate + " / 5");
+    $("#quick-view-modal").show();
+});
+
+function closeModal(){
+    $("#quick-view-modal").hide();
+}
+
+function toggleMenu() {
+    document.querySelector(".nav-menu ul").classList.toggle("mobile-menu");
+}
+</script>
 
 </body>
 
