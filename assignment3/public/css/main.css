@@ -786,6 +786,27 @@
     letter-spacing: 0.5px;
 }
 
+
+.hamburger-btn {
+    display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* optional: hide desktop nav on mobile */
+    .nav-menu {
+        display: none;
+    }
+}
+
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════ */

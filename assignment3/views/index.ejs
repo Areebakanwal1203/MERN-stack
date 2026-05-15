@@ -244,6 +244,12 @@
     </footer>
 
 <script>
+
+      function toggleMenu() {
+    document.querySelector(".nav-menu ul")
+            .classList.toggle("mobile-menu");
+    }
+    
     function openSidebar(){
         document.getElementById("mobileSidebar").classList.add("open");
         document.getElementById("mobileOverlay").classList.add("show");

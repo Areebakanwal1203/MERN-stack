@@ -19,7 +19,8 @@
 }
  #menuBar {
     display: flex;
-    padding: 35px;
+    padding: 50px;
+    height: 75px; 
     padding-bottom: 50px;
 }
 
