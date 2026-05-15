@@ -1,0 +1,15 @@
+{
+  "name": "nishat-outlet",
+  "version": "1.0.0",
+  "description": "Nishat Outlet E-Commerce Clone with Dynamic Product Catalog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "mongoose": "^8.0.0"
+  }
+}
