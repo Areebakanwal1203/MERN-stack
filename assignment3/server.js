@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost:27017/nishat')
+mongoose.connect('mongodb://localhost:27017/TA3_nishat')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error(err));
 
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-// PRODUCTS ROUTE (same as before)
+// PRODUCTS ROUTE
 app.get('/products', async (req, res) => {
     try {
         const LIMIT = 8;
