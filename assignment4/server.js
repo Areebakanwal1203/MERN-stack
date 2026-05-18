@@ -33,7 +33,7 @@ const upload = multer({
 });
 
 // ── MongoDB ─────────────────────────────────────────────────────────
-mongoose.connect('mongodb://localhost:27017/nishat')
+mongoose.connect('mongodb://localhost:27017/TA3_nishat')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error(err));
 
