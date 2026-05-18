@@ -50,7 +50,7 @@ async function seedDB() {
         await Product.insertMany(seedProducts);
         console.log(`Seeded ${seedProducts.length} products`);
 
-        await seedAdmin(); // ✅ FIXED placement
+        await seedAdmin(); // FIXED placement
 
         mongoose.disconnect();
     } catch (err) {
